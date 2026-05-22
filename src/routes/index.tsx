@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import { QRCodeCanvas, QRCodeSVG } from "qrcode.react";
 import jsPDF from "jspdf";
+import { Linkedin, Mail, MessageCircleMore } from "lucide-react";
 import QRCodeLib from "qrcode";
 import { LoadingGlyphArt, PortalBackdropArt } from "@/components/game-art";
 
@@ -35,6 +36,11 @@ const ROLE_HELPERS: Record<Role, string> = {
   adm: "Planilha padrão: A=Código, B=Produto e E=Qtde Esperada.",
   rh: "Planilha do RH: o sistema tenta encontrar o código mesmo se a ordem das colunas mudar.",
 };
+
+const DEVELOPER_NAME = "Leonardo Gonçalves da Silva";
+const DEVELOPER_LINKEDIN_URL = "https://www.linkedin.com/in/leonardo-g-silva-353228210/";
+const DEVELOPER_WHATSAPP_URL = "https://wa.me/5521982111477";
+const DEVELOPER_EMAIL_URL = "mailto:leonardogsilv1@gmail.com";
 
 function storageKey(prefix: string, role: Role) {
   return `${prefix}-${role}`;
@@ -977,6 +983,42 @@ function RoleGate({ onSelect }: { onSelect: (role: Role) => void }) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-4 flex flex-col items-center justify-center gap-3 text-[11px] tracking-[0.14em] text-slate-400">
+            <span className="uppercase">
+              Desenvolvido por{" "}
+              <span className="font-semibold text-slate-600">{DEVELOPER_NAME}</span>
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+              <a
+                href={DEVELOPER_LINKEDIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/75 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-[#0a66c2]/30 hover:text-[#0a66c2] hover:shadow-md"
+              >
+                <Linkedin className="size-3.5" aria-hidden="true" />
+                LinkedIn
+              </a>
+              <a
+                href={DEVELOPER_WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/75 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-emerald-400/30 hover:text-emerald-600 hover:shadow-md"
+              >
+                <MessageCircleMore className="size-3.5" aria-hidden="true" />
+                WhatsApp
+              </a>
+              <a
+                href={DEVELOPER_EMAIL_URL}
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/75 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-rose-400/30 hover:text-rose-600 hover:shadow-md"
+              >
+                <Mail className="size-3.5" aria-hidden="true" />
+                E-mail
+              </a>
+            </div>
+            <p className="text-[10px] leading-tight tracking-[0.18em] text-slate-400">
+              WhatsApp: (21) 98211-1477 · E-mail: leonardogsilv1@gmail.com
+            </p>
           </div>
         </section>
       </main>
