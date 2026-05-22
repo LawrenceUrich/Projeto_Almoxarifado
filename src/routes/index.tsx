@@ -547,12 +547,12 @@ function Index() {
       </header>
 
       <main className="mx-auto flex-1 max-w-7xl space-y-6 px-6 py-8">
-        <section className="no-print">
-          <div className="rounded-3xl border border-border/60 bg-card/60 p-6 shadow-2xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+        <section className="no-print w-full">
+          <div className="relative w-full overflow-hidden rounded-3xl border border-border/60 bg-card/60 p-6 shadow-2xl shadow-black/30 backdrop-blur-sm">
             <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-primary/18 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-24 -left-24 size-64 rounded-full bg-accent/14 blur-3xl" />
-            <div className="relative flex flex-col gap-5 md:flex-row md:items-center">
-              <label className="flex-1 w-full flex items-center gap-4 border-2 border-dashed border-border/70 rounded-2xl p-5 cursor-pointer hover:border-primary/70 hover:bg-primary/5 transition group">
+            <div className="relative flex w-full flex-col gap-5 md:flex-row md:items-stretch">
+              <label className="flex w-full flex-1 items-center gap-4 self-stretch rounded-2xl border-2 border-dashed border-border/70 p-5 min-h-[128px] cursor-pointer transition hover:border-primary/70 hover:bg-primary/5 group">
                 <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-primary/30 to-accent/30 text-primary transition group-hover:scale-105">
                   <svg
                     width="24"
