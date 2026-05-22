@@ -493,7 +493,7 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <header className="no-print sticky top-0 z-20 border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
           <div className="flex items-center gap-3">
@@ -546,7 +546,7 @@ function Index() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-6 px-6 py-8">
+      <main className="mx-auto flex-1 max-w-7xl space-y-6 px-6 py-8">
         <section className="no-print">
           <div className="rounded-3xl border border-border/60 bg-card/60 p-6 shadow-2xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
             <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-primary/18 blur-3xl" />
@@ -793,6 +793,44 @@ function Index() {
           </div>
         )}
       </main>
+
+      <footer className="no-print border-t border-border/30 bg-background/75 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-3 text-[11px] tracking-[0.14em] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span className="uppercase">
+            Desenvolvido por <span className="font-semibold text-slate-700">{DEVELOPER_NAME}</span>
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <a
+              href={DEVELOPER_LINKEDIN_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-[#0a66c2]/30 hover:text-[#0a66c2] hover:shadow-md"
+            >
+              <Linkedin className="size-3.5" aria-hidden="true" />
+              LinkedIn
+            </a>
+            <a
+              href={DEVELOPER_WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-emerald-400/30 hover:text-emerald-600 hover:shadow-md"
+            >
+              <MessageCircleMore className="size-3.5" aria-hidden="true" />
+              WhatsApp
+            </a>
+            <a
+              href={DEVELOPER_EMAIL_URL}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 font-semibold uppercase text-slate-500 shadow-sm transition hover:border-rose-400/30 hover:text-rose-600 hover:shadow-md"
+            >
+              <Mail className="size-3.5" aria-hidden="true" />
+              E-mail
+            </a>
+          </div>
+          <p className="text-[10px] leading-tight tracking-[0.18em] text-slate-400 sm:text-right">
+            WhatsApp: (21) 98211-1477 · E-mail: leonardogsilv1@gmail.com
+          </p>
+        </div>
+      </footer>
 
       {busy && busyVisible && <LoadingOverlay title={busy.title} detail={busy.detail} />}
     </div>
