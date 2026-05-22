@@ -826,9 +826,6 @@ function Index() {
               E-mail
             </a>
           </div>
-          <p className="text-[10px] leading-tight tracking-[0.18em] text-slate-400 sm:text-right">
-            WhatsApp: (21) 98211-1477 · E-mail: leonardogsilv1@gmail.com
-          </p>
         </div>
       </footer>
 
@@ -1054,9 +1051,6 @@ function RoleGate({ onSelect }: { onSelect: (role: Role) => void }) {
                 E-mail
               </a>
             </div>
-            <p className="text-[10px] leading-tight tracking-[0.18em] text-slate-400">
-              WhatsApp: (21) 98211-1477 · E-mail: leonardogsilv1@gmail.com
-            </p>
           </div>
         </section>
       </main>
