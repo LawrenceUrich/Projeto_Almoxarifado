@@ -495,7 +495,7 @@ function Index() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="no-print sticky top-0 z-20 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[90rem] flex-wrap items-center justify-between gap-4 px-6 py-4">
+        <div className="mx-auto flex w-full max-w-none flex-wrap items-center justify-between gap-4 px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="grid size-11 place-items-center rounded-2xl bg-gradient-to-br from-primary via-primary to-accent font-bold text-primary-foreground shadow-lg shadow-primary/40">
               <svg
@@ -546,13 +546,13 @@ function Index() {
         </div>
       </header>
 
-      <main className="mx-auto flex-1 max-w-[90rem] space-y-6 px-6 py-8">
+      <main className="mx-auto flex w-full flex-1 max-w-none space-y-6 px-6 py-8">
         <section className="no-print w-full">
-          <div className="relative w-full overflow-hidden rounded-3xl border border-border/60 bg-card/60 p-6 shadow-2xl shadow-black/30 backdrop-blur-sm">
+          <div className="relative w-full overflow-hidden rounded-3xl border border-border/60 bg-card/60 p-8 shadow-2xl shadow-black/30 backdrop-blur-sm">
             <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-primary/18 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-24 -left-24 size-64 rounded-full bg-accent/14 blur-3xl" />
             <div className="relative flex w-full flex-col gap-5 md:flex-row md:items-stretch">
-              <label className="flex w-full flex-1 items-center gap-4 self-stretch rounded-2xl border-2 border-dashed border-border/70 p-5 min-h-[128px] cursor-pointer transition hover:border-primary/70 hover:bg-primary/5 group">
+              <label className="flex w-full flex-1 items-center gap-4 self-stretch rounded-2xl border-2 border-dashed border-border/70 p-6 min-h-[160px] cursor-pointer transition hover:border-primary/70 hover:bg-primary/5 group">
                 <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-primary/30 to-accent/30 text-primary transition group-hover:scale-105">
                   <svg
                     width="24"
@@ -795,7 +795,7 @@ function Index() {
       </main>
 
       <footer className="no-print border-t border-border/30 bg-background/75 backdrop-blur">
-        <div className="mx-auto flex max-w-[90rem] flex-col gap-3 px-6 py-3 text-[11px] tracking-[0.14em] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex w-full max-w-none flex-col gap-3 px-6 py-3 text-[11px] tracking-[0.14em] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <span className="uppercase">
             Desenvolvido por <span className="font-semibold text-slate-700">{DEVELOPER_NAME}</span>
           </span>
