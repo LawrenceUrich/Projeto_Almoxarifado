@@ -546,7 +546,7 @@ function Index() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full flex-1 max-w-none space-y-6 px-6 py-8">
+      <main className="mx-auto flex w-full flex-1 max-w-none flex-col space-y-6 px-6 py-8">
         <section className="no-print w-full">
           <div className="relative w-full overflow-hidden rounded-3xl border border-border/60 bg-card/60 p-8 shadow-2xl shadow-black/30 backdrop-blur-sm">
             <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-primary/18 blur-3xl" />
